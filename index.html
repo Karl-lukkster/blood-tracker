@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+		<script src="https://cdn.plot.ly/plotly-3.4.0.min.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script src="static/sugars.js" type="text/javascript"></script>
+		<script src="graph.js"></script>
+		<script src="buttons.js"></script>
+		<title>Blood-Tracker</title>
+	</head>
+	<body>
+		<div id="options">
+			<label for="rangeSel"> View Range: </label>
+			<select id="rangeSel" onchange="onRange()">
+				<option value="week1">One Week</option>
+				<option value="week2">Two Weeks</option>
+				<option value="month1">One Month</option>
+				<option value="month3" selected>Three Months</option>
+				<option value="month6">Six Months</option>
+				<option value="year1">One Year</option>
+				<option value="all">All</option>
+				<option value="custom">Custom</option>
+			</select>
+			<label id="startLabel" for="startDate"> Start: </label>
+			<input id="startDate" type="date" onchange="graph()">
+			<label id="endLabel" for="endDate"> End: </label>
+			<input id="endDate" type="date" onchange="graph()">
+			<label for="displaySel"> Display Type: </label>
+			<select id="displaySel" onchange="graph()">
+				<option value="day" selected>Day</option>
+				<option value="week">Week</option>
+				<option value="all">All</option>
+			</select>
+		</div>
+		<div id="grapher"></div>
+	</body>
+	<script>
+		graph();
+	</script>
+</html>

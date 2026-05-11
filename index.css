@@ -1,0 +1,24 @@
+html {
+	background-color: #d3dfeb;
+}
+
+#options {
+	margin-bottom: 8px;
+	select {
+		width: 110px;
+	}
+	min-width: 730px;
+}
+
+#startLabel {
+	display: none;
+}
+#startDate {
+	display: none;
+}
+#endLabel {
+	display: none;
+}
+#endDate {
+	display: none;
+}
