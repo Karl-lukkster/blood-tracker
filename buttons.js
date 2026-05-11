@@ -42,7 +42,7 @@ function getRange() {
 			then = new Date(1970, 0);
 		}
 		if (endDate.value) {
-			now = new Date(startDate.value);
+			now = new Date(endDate.value);
 		}
 	}
 	return [then, now];
